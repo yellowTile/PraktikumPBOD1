@@ -49,10 +49,11 @@ public class Main {
 
         System.out.println("sama kah?" + p1.isEquals(p2));
 
-        l1.zoomIn();
-        System.out.println("after zoomIn: " + l1.getLuas());
+        p2.zoomIn();
+        System.out.println("hasil after zoomIn: " + p2.getSisi());
 
         }
+
 
 
         // keuntungan method zoomIn(), zoomOut(), dan zoom() dalam interface Iresize dibanding abstract di bangunDatar yaitu semua class yang extends bangunDatar wajib punya implementasi si method method tsb, 

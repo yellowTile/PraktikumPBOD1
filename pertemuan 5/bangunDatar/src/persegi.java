@@ -32,13 +32,13 @@ public class persegi extends bangunDatar implements Iresize{
         sisi = sisi * 1.1;
     }
 
-    public void zoomOut(){
-        sisi = sisi * 0.9;
-    }
+    // public void zoomOut(){
+    //     sisi = sisi * 0.9;
+    // }
 
-    public void zoom(int percent){
-        sisi = sisi * percent/100;
-    }
+    // public void zoom(int percent){
+    //     sisi = sisi * percent/100;
+    // }
 
     public double getDiagonal(){
         return sisi * Math.sqrt(2);

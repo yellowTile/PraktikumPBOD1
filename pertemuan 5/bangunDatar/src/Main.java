@@ -55,6 +55,13 @@ public class Main {
         }
 
 
+        // apakah method pada langkah nomor 4 dapat digunakan untuk membaningkan objek bangun datar yang berbeda?
+        // ya, bisa. soalnya isEqualLuas() dan isEqualKeliling() paka reference type bangunDatar, jadi bisa dibandingin
+
+        // jika bangunDatar tidak dijadikan abstract class,. dapatkah membuat method idEqualLUas() dan isEqualKeliling() mengapa?
+        // secara sintaks bisa, tapi secara konsep kurang tepat, class bangunDatar=konsep umum(abstraksi), bukan bentuk nyata, luas n keliling gapunya rumus umum,
+        // klo ga abstract: harus ngasih implementasi getLuas() n getKeliling() di bangunDatar, padahal implementasinya beda utk tiap bangun
+
 
         // keuntungan method zoomIn(), zoomOut(), dan zoom() dalam interface Iresize dibanding abstract di bangunDatar yaitu semua class yang extends bangunDatar wajib punya implementasi si method method tsb, 
         // tapi ga semua bentuk bangun datar butuh zoom. jadinya kalo masuk interface lebih flexible

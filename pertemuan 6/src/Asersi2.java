@@ -24,3 +24,8 @@ public class Asersi2 {
         System.out.println("keliling lingkaran = " + kelilingLingkaran);
     }
 }
+
+
+// PETANYAAN : secara konsep, ada yang kurang tepat pada program Asersi2 di atas.
+// jawaban : terdapat kekurangan secara konsep dalam penggunaan asersi. dimana menggunakan assert untuk validasi nilai input,
+//           padahal assert hanya diperuntukkan untuk mendeteksi kesalahan logika internal program

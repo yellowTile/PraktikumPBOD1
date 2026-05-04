@@ -3,10 +3,17 @@
 // Tanggal: 27 April 2026
 
 public class Kucing extends Anabul {
+    double bobot;
 
     public Kucing(String nama) {
         super(nama);
     }
+
+    public Kucing(String nama, double bobot) {
+        super(nama);
+        this.bobot = bobot;
+    }
+
 
     @Override
     public void gerak() {

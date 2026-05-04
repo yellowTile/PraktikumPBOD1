@@ -32,13 +32,13 @@ public class persegi extends bangunDatar implements Iresize{
         sisi = sisi * 1.1;
     }
 
-    // public void zoomOut(){
-    //     sisi = sisi * 0.9;
-    // }
+    public void zoomOut(){
+        sisi = sisi * 0.9;
+    }
 
-    // public void zoom(int percent){
-    //     sisi = sisi * percent/100;
-    // }
+    public void zoom(int percent){
+        sisi = sisi * percent/100;
+    }
 
     public double getDiagonal(){
         return sisi * Math.sqrt(2);
@@ -85,3 +85,4 @@ public class persegi extends bangunDatar implements Iresize{
     // bagian 5, hasilnya semuanya error jika parentnya tidak bisa di extends
     // untuk bagian printinfo jadinya error kalau di parent printinfonya ditambahakan final 
 }
+

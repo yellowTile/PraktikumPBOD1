@@ -1,3 +1,7 @@
+// NIM: 24060124130095
+// Nama: Zulfa Nabilah
+// Tanggal: 27 April 2026
+
 public class Mahasiswa {
     String NIM;
     String Nama;

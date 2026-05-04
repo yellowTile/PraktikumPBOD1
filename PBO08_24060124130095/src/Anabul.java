@@ -1,6 +1,6 @@
 // NIM: 24060124130095
 // Nama: Zulfa Nabilah
-// Tanggal: 27 April 2026
+// Tanggal: 4 Mei 2026
 
 public class Anabul {
     String nama;

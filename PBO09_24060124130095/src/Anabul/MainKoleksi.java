@@ -32,3 +32,8 @@ public class MainKoleksi {
         KoleksiAnabul.bersuarasemua(); // Memanggil suara semua Anabul
     }
 }
+
+
+// renungan : intinya bikin kumpulan objek. objek yg pengen disimpan bisa ditaro di array statis or dinamis.
+// data yg ada bisa di akses, ubah, hapus, dll
+

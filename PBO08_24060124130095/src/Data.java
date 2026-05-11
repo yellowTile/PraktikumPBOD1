@@ -1,3 +1,7 @@
+// NIM: 24060124130095
+// Nama: Zulfa Nabilah
+// Tanggal: 4 Mei 2026
+
 class Data<T> {
     private T[] ruang;
     private int banyak;

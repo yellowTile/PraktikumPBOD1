@@ -1,15 +1,9 @@
-/* Nama : George Imanuel Surya
- * NIM : 24060123120028
- * File : Koleksi.java
- * Tanggal : 10 Mei 2025
- */
-
+// NIM: 24060124130095
+// Nama: Zulfa Nabilah
+// Tanggal: 11 Mei 2025
 package Anabul;
 
-/**
- *
- * @author noels
- */
+
 public class Koleksi<T> {
 
     private int NbElemen; // Jumlah elemen dalam koleksi

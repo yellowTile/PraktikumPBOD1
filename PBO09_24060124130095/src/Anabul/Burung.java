@@ -1,8 +1,6 @@
-/* Nama : George Imanuel Surya
- * NIM : 24060123120028
- * File : Anjing.java
- * Tanggal : 29 Apr 2025
- */
+// NIM: 24060124130095
+// Nama: Zulfa Nabilah
+// Tanggal: 11 Mei 2025
 package Anabul;
 
 public class Burung extends Anabul {

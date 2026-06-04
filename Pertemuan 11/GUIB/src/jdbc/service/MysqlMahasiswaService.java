@@ -17,7 +17,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-import java.sql.Statement;
 
 public class MysqlMahasiswaService {
     Connection koneksi = null;
@@ -27,7 +26,7 @@ public class MysqlMahasiswaService {
         this.koneksi = MysqlUtility.getConnection();
     }
 
-    /** *
+    /** * Membuat objek mahasiswa dari ResultSet
      */
     public Mahasiswa makeMhsObject(ResultSet rs) throws SQLException {
         Mahasiswa mhs = new Mahasiswa();
@@ -36,7 +35,7 @@ public class MysqlMahasiswaService {
         return mhs;
     }
 
-    /** 
+    /** * Menambahkan data mahasiswa 
      */
     public void add(Mahasiswa mhs) {
         String query = "INSERT INTO mahasiswa (id, nama) VALUES (?, ?)";
@@ -53,7 +52,7 @@ public class MysqlMahasiswaService {
         }
     }
 
-    /** * Update data
+    /** * Update data mahasiswa 
      */
     public void update(Mahasiswa mhs) {
         String query = "UPDATE mahasiswa SET nama = ? WHERE id = ?";
@@ -72,7 +71,7 @@ public class MysqlMahasiswaService {
         }
     }
 
-    /** * Delete data
+    /** * Delete data mahasiswa sesuai id 
      */
     public void delete(int id) {
         String query = "DELETE FROM mahasiswa WHERE id = ?";
@@ -90,7 +89,7 @@ public class MysqlMahasiswaService {
         }
     }
 
-    /** * 
+    /** * Ambil mahasiswa sesuai id 
      */
     public Mahasiswa getById(int id) {
         Mahasiswa mhs = null;
@@ -108,7 +107,7 @@ public class MysqlMahasiswaService {
         return mhs;
     }
 
-    /** * 
+    /** * Ambil semua isi tabel mahasiswa 
      */
     public List<Mahasiswa> getAll() {
         List<Mahasiswa> listMhs = new ArrayList<>();
@@ -124,45 +123,5 @@ public class MysqlMahasiswaService {
             System.out.println("Gagal mengambil semua data: " + sqle.getMessage());
         }
         return listMhs;
-    }
-    
-    
-     
-    public void indexReset() {
-        String query = "ALTER TABLE mahasiswa AUTO_INCREMENT = 1";
-        try (Statement st = koneksi.createStatement()) {
-            st.execute(query);
-            System.out.println("Indeks tabel mahasiswa berhasil di-reset ke 1.");
-        } catch (SQLException sqle) {
-            System.out.println("Gagal mereset indeks: " + sqle.getMessage());
-        }
-    }
-
-    /** *
-     */
-    public boolean isEmpty() {
-        String query = "SELECT COUNT(*) FROM mahasiswa";
-        try (Statement st = koneksi.createStatement();
-             ResultSet rs = st.executeQuery(query)) {
-            if (rs.next()) {
-                return rs.getInt(1) == 0;
-            }
-        } catch (SQLException sqle) {
-            System.out.println("Gagal memeriksa tabel: " + sqle.getMessage());
-        }
-        return true;
-    }
-
-    /** 
-     */
-    public void closeConnection() {
-        try {
-            if (koneksi != null && !koneksi.isClosed()) {
-                koneksi.close();
-                System.out.println("Koneksi database ditutup.");
-            }
-        } catch (SQLException sqle) {
-            System.out.println("Gagal menutup koneksi: " + sqle.getMessage());
-        }
     }
 }
